@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dexter&#39;s Personal Site</title>
+    <link>dextervolkman.com/</link>
+    <description>Recent content on Dexter&#39;s Personal Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Thu, 23 Apr 2020 20:35:16 -0700</lastBuildDate>
+    
+	<atom:link href="dextervolkman.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Interests</title>
+      <link>dextervolkman.com/interests/</link>
+      <pubDate>Thu, 23 Apr 2020 20:35:16 -0700</pubDate>
+      
+      <guid>dextervolkman.com/interests/</guid>
+      <description>Computers I&amp;rsquo;m completely self-taught and have been learning about Linux and computers since college. I would like to say that it is just a hobby but at this point it might be more on an addiction, now that I&amp;rsquo;ve peeked behind the curtain of computer technology, I&amp;rsquo;m not sure I could stop looking for more knowledge if I tried ¯\(ツ)/¯
+My curiosity is likely the biggest reason I was attracted to the Linux operating system.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>dextervolkman.com/about/</link>
+      <pubDate>Tue, 21 Apr 2020 22:42:23 -0700</pubDate>
+      
+      <guid>dextervolkman.com/about/</guid>
+      <description>My name is Dexter Volkman. Online I mostly go by dexmexter. Here is a little about me for those interested.
+Professional I am currently employed at Stratum Systems as an IT support technician persuading computers, networks, and people to work together productively. Most days I feel like the printers are the worst behaved obstacle to cooperation.
+CV link coming soon&amp;hellip;
+Internet Locations  https://dextervolkman.com LBRY.tv GitHub Email  Personal Interests More detailed list of the following can be found on the Interests page</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>dextervolkman.com/posts/my-first-post/</link>
+      <pubDate>Tue, 21 Apr 2020 21:14:18 -0700</pubDate>
+      
+      <guid>dextervolkman.com/posts/my-first-post/</guid>
+      <description>This is the first post! I&amp;rsquo;m not sure yet what I&amp;rsquo;m going to do with this space but my first instict is to start using it as a place to write some tutorials so that I can remind my future self of all the little tips and tricks I&amp;rsquo;ve learned.</description>
+    </item>
+    
+  </channel>
+</rss>

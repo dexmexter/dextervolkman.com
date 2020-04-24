@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>dextervolkman.com/</loc>
+    <lastmod>2020-04-23T20:35:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>dextervolkman.com/interests/</loc>
+    <lastmod>2020-04-23T20:35:16-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>dextervolkman.com/about/</loc>
+    <lastmod>2020-04-21T22:42:23-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>dextervolkman.com/posts/my-first-post/</loc>
+    <lastmod>2020-04-21T21:14:18-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>dextervolkman.com/posts/</loc>
+    <lastmod>2020-04-21T21:14:18-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>dextervolkman.com/tags/</loc>
+    <lastmod>2020-04-21T21:14:18-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>dextervolkman.com/tags/untagged/</loc>
+    <lastmod>2020-04-21T21:14:18-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>dextervolkman.com/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>dextervolkman.com/series/</loc>
+  </url>
+  
+</urlset>

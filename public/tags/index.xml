@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Dexter&#39;s Personal Site</title>
+    <link>dextervolkman.com/tags/</link>
+    <description>Recent content in Tags on Dexter&#39;s Personal Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 21 Apr 2020 21:14:18 -0700</lastBuildDate>
+    
+	<atom:link href="dextervolkman.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>untagged</title>
+      <link>dextervolkman.com/tags/untagged/</link>
+      <pubDate>Tue, 21 Apr 2020 21:14:18 -0700</pubDate>
+      
+      <guid>dextervolkman.com/tags/untagged/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
