@@ -10,6 +10,7 @@ My curiosity is likely the biggest reason I was attracted to the Linux operating
 
 #### Projects
 Some of the projects I've worked on that I am most proud of:
+
 - This website
 - I completed Harvard's cs50 course through the edX platform. It was incredibly difficult and took way longer than I care to admit but I'm thrilled I was able to make it all the way through. More information on the course: <https://www.edx.org/course/cs50s-introduction-to-computer-science>
     - My final project for the course is a Sudoku web application. It is not hosted anywhere (except on my home server) but heres a link to the source <https://github.com/dexmexter/cs50_final-project>
@@ -21,6 +22,7 @@ Some of the projects I've worked on that I am most proud of:
 
 #### Tools/Utilities
 Here are some of the Unix programs I like to use on the regular:
+
 - suckless utilities
     - dwm
     - st
