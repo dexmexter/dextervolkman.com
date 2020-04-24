@@ -19,6 +19,7 @@ CV link coming soon...
 
 ## Personal Interests
 More detailed list of the following can be found on the [Interests](../interests) page
+
 - Computers
 - Music
 - Indie video games
