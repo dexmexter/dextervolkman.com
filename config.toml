@@ -1,4 +1,4 @@
-baseurl      = "dextervolkman.com"
+baseurl      = "https://dextervolkman.com"
 title        = "Dexter's Personal Site"
 languageCode = "en-us"
 theme        = "hello-friend-ng"
