@@ -3,6 +3,8 @@ title        = "Dexter's Personal Site"
 languageCode = "en-us"
 theme        = "hello-friend-ng"
 
+enableGitInfo = true
+
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
