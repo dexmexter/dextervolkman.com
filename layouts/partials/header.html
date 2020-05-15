@@ -1,7 +1,11 @@
 <header class="header">
+    <head>
+        {{ template "_internal/google_analytics.html" . }}
+        {{ template "_internal/google_analytics_async.html" . }}
+    </head>
+
     <span class="header__inner">
         {{ partial "logo.html" . }}
-        {{ template "_internal/google_analytics.html" . }}
 
         <span class="header__right">
             {{ if len .Site.Menus }}
