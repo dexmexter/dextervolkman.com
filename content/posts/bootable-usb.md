@@ -33,7 +33,7 @@ system you are flashing then just use ext4.
 
 Use dd (data duplicator) to copy the ISO to the newly formatted disk.
 
-`$ sudo dd if=[ input file ] of=[ output file ] status="progress"
+`$ sudo dd if=[ input file ] of=[ output file ] status="progress"`
 
 The USB should now be ready. Pretty simple, maybe I'll remember how to do it
 one day.
