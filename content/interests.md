@@ -20,6 +20,13 @@ about the computers I use but I am going to keep learning as much as I can.
 
 Some of the projects I've worked on that I am most proud of:
 - This website
+- I compiled my own linux system from source by following the [Linux From
+  Scratch](http://www.linuxfromscratch.org/lfs/view/stable-systemd/) book. If
+  you would like to download the system you can do so [right
+  here](https://drive.google.com/file/d/1JXqcG9EnXOpNSHf7I5TTrtikatTHqPnF/view?usp=sharing).
+  I also have a post with instructions for how to take this [backup and
+  restore](/posts/tar-backup-and-restore) it to a drive so that you can try it
+  out. Note that it is a very small system with limited functionality.
 - I completed Harvard's cs50 course through the edX platform. It was incredibly
   difficult and took way longer than I care to admit but I'm thrilled I was
   able to make it all the way through. More information on the course:
