@@ -1,8 +1,8 @@
 ---
 title: "What I've been learning"
 date: 2020-05-20T20:34:46-07:00
-draft: true
-toc: false
+draft: false
+toc: true
 ---
 
 ## Introduction
@@ -35,20 +35,55 @@ version of TIL (today I learned).
     - A critic of the ever expanding features that browsers seem to be adding
       in order to become more and more like a full OS
 - <https://www.freecodecamp.org/news/keep-calm-and-hack-the-box-bank/>
-    - Walkthrough of Hack The Box - Bank
+    - Walk-through of Hack The Box - Bank
 - <https://thecorrespondent.com/466/the-neoliberal-era-is-ending-what-comes-next/61693368132-4c252cee?pk_campaign=sneak-peek&pk_kwd=neoliberalism>
-    - Predicts that Covid-19 will result in the collapse of Neoliberal economic
+    - Predicts that Covid-19 will result in the collapse of Neo-liberal economic
       theorys and puts forward a hopeful picture of what might take it's place.
       Written by Rutger Bregman.
-
-#### Thu May 21, 2020
-
-## Still reading
-
 - <https://www.csun.io/2020/05/17/gnucash-finance.html>
     - An introduction to `gnucash` and an argument for why it is a useful tool to
       use for tracking personal finances.
+
+#### Thu May 21, 2020
+
+- <https://www.vox.com/recode/2020/5/21/21266570/facebook-remote-work-from-home-mark-zuckerberg-twitter-covid-19-coronavirus>
+    - Facebook announced that many employees will be able to work remotely on a
+      permanant basis.
+- <https://www.yahoo.com/entertainment/twitter-jack-dorsey-giving-andrew-090025479.html>
+    - Jack Dorsey (of Twitter fame) pledged $5 million to Andrew Yang's
+      Humanity Forward group for the purpose of making the case for a UBI
+      (Universal Basic Income)
+- <https://www.freecodecamp.org/news/keep-calm-and-hack-the-box-blocky/>
+    - Walk through of Blocky, a HTB (Hack the Box) challenge
+- <https://lbry.tv/@DistroTube:2/slock-is-a-simple-x-display-locker:c>
+    - Short introduction to the suckless slock program
+
+#### Fri May 22, 2020
+
+- <https://www.youtube.com/watch?v=XAFD-0aMkwE>
+    - Systemic racism in the US has contributed to POC having higher rates of
+      cancer and Covid-19. Governmental policies resulted in POC living in
+      places that have poorer air quality due to nearby manufacturing
+      facilities.
+- <https://www.washingtonpost.com/entertainment/music/copyright-bots-and-classical-musicians-are-fighting-online-the-bots-are-winning/2020/05/20/a11e349c-98ae-11ea-89fd-28fb313d1886_story.html>
+    - YouTube and Facebook have been removing content from people performing
+      Classical music that has been in the Public domain for hundreds of
+      years.
+
+#### Sat May 23, 2020
+
+- <https://www.youtube.com/watch?v=QumeDEv3DyM>
+    - Looking at comedic news shows through a philosophical lens
+- <https://arstechnica.com/science/2020/05/right-to-repair-groups-fire-shots-at-medical-device-manufacturers/>
+    - How the Right-to-repair movement intersects with the medical community.
+      iFixit is helping to create a database of manuals for repairing medical
+      devices.
+- <https://www.youtube.com/watch?v=p8N0xN0ihMA>
+    - Twitter's origin story
 - <https://leanpub.com/the-tao-of-tmux/read>
     - Book on how to use `tmux` effectively
+
+## Still reading
+
 - <http://www.linusakesson.net/programming/tty/index.php>
-    - Explaination on the history and usage of `TTYs`
+    - Explanation of the history and usage of `TTYs`
