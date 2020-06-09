@@ -2,21 +2,26 @@
 title: "Interests"
 date: 2020-04-23T20:35:16-07:00
 draft: false
+toc: true
 ---
-### Computers
+## Links
 
-I'm completely self-taught and have been learning about Linux and computers
-since college. I would like to say that it is just a hobby but at this point it
-might be more on an addiction, now that I've peeked behind the curtain of
-computer technology, I'm not sure I could stop looking for more knowledge if I
-tried ¯\\_(ツ)_/¯
+I have an RSS feed that gives me a steady supply of reading material. When I
+find something I find really interesting or useful I add the link to a growing
+list. This list can be found at <https://dextervolkman.com/links>
+
+## Computers
+
+I'm entirely self-taught and have been learning about Linux and computers since
+college. It began as just a hobby but now that I've seen how much there is to
+learn, I'm not sure I could stop seeking knowledge if I tried ¯\\_(ツ)_/¯
 
 My curiosity is likely the biggest reason I was attracted to the Linux
 operating system. The fact that I can dig down and read the source code for
 everything my system is doing just blows me away. I will never know everything
 about the computers I use but I am going to keep learning as much as I can.
 
-#### Projects
+### Projects
 
 Some of the projects I've worked on that I am most proud of:
 - This website
@@ -48,7 +53,7 @@ Some of the projects I've worked on that I am most proud of:
     - Bash
     - Git
 
-#### Tools/Utilities
+### Tools/Utilities
 
 Here are some of the Unix programs I like to use on the regular:
 - suckless utilities
@@ -56,13 +61,14 @@ Here are some of the Unix programs I like to use on the regular:
     - st
     - slock
     - dmenu
-- neovim
+- vim
 - tmux
 - ranger
 - newsboat
 - keepassxc
+- ncmpcpp
 
-### Music
+## Music
 
 I mostly play guitar and sing but am also passingly decent on the bass guitar,
 hand percussion, piano, and trumpet. I love listening to electronic music and
@@ -71,8 +77,10 @@ Deluge](https://synthstrom.com/product/deluge/) to start creating some of my
 own. I don't consider myself much of a creative, I am much more interested in
 the patterns and analysis of music theory and music production.
 
-### Other interests
-- Indie video games
+## Other interests
+
+### Indie video games
+
     - [Hollow Knight](https://hollowknight.com)
     - [Celeste](https://celestegame.com)
     - [Nier Automata](https://store.steampowered.com/app/524220/NieRAutomata/)
@@ -81,25 +89,25 @@ the patterns and analysis of music theory and music production.
     - [CrossCode](https://cross-code.com)
     - [Ori and the Blind Forest](https://www.orithegame.com)
     - [Cuphead](https://cupheadgame.com)
-- Books
-    - [Red Rising
-      trilogy](https://www.goodreads.com/book/show/15839976-red-rising)
-    - [Inheritance
-      Cycle](https://www.goodreads.com/series/44866-the-inheritance-cycle)
-    - I have [Malazan Book of the
-      Fallen](https://www.goodreads.com/series/43493-malazan-book-of-the-fallen)
+
+### Books
+
+    - [Red Rising trilogy](https://www.goodreads.com/book/show/15839976-red-rising)
+    - [Inheritance Cycle](https://www.goodreads.com/series/44866-the-inheritance-cycle)
+    - I have [Malazan Book of the Fallen](https://www.goodreads.com/series/43493-malazan-book-of-the-fallen)
       but have not yet the courage to begin that particular quest
-    - Waiting for the last book of [The Kingkiller
-      Chronicle](https://www.goodreads.com/series/45262-the-kingkiller-chronicle)
+    - Waiting for the last book of [The Kingkiller Chronicle](https://www.goodreads.com/series/45262-the-kingkiller-chronicle)
       before diving in
     - [Mistborn Trilogy](https://www.goodreads.com/series/40910-mistborn)
       (likewise waiting for the fourth book in the current series to come out
       before starting)
     - Anything else by Sanderson, I haven't read all his stuff but I've loved
       everything I've read so far
-- Rock climbing
+
+### Rock climbing
+
     - I have a membership at a local gym where I climb most V4 problems and a
       handful of V5 problems. Still trying to break through into V6 but no luck
-      so far. I am sorely missing the gym during the current Covid-19 season
+      so far
     - I've been climbing outdoors a handful of times and would love to get more
       experience doing that
