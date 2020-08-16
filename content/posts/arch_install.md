@@ -1,6 +1,6 @@
 ---
 title: "Arch Install"
-date: 2020-07-06T22:57:52-07:00
+date: Sun 16 Aug 2020 03:48:35 PM PDT
 draft: false
 toc: true
 tags:
@@ -175,13 +175,15 @@ hwclock --systohc
 
 ### Localization
 
-Edit `/etc/locale.gen`, uncomment `en_US.UTF-8 UTF-8`. Generate with:
+Edit `/etc/locale.gen`, uncomment `en_US.UTF-8 UTF-8`.
 
-```
+Generate locale with:
+
+```bash
 locale-gen
 ```
 
-Create `/etc/locale.conf` and set `LANG`:
+Create `/etc/locale.conf` and set `LANG` variable:
 
 ```
 LANG=en_US.UTF-8
@@ -207,7 +209,7 @@ Replace `127.0.1.1` with a static IP if appropriate.
 
 ### Root password
 
-```
+```bash
 passwd
 ```
 
@@ -259,7 +261,7 @@ working correctly. A static IP, default route, and DNS servers are all needed.
 
 ## Time synchronization
 
-```
+```bash
 timedatectl set-ntp true
 ```
 
