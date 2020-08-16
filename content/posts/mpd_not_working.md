@@ -2,6 +2,7 @@
 title: "Mpd not working? Try starting with --user"
 date: 2020-07-22T21:44:40-07:00
 draft: false
+tags: linux, mpd, ncmpcpp
 ---
 
 This is an issue that has happened more than once now. I'll restart my computer
