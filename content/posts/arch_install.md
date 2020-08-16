@@ -3,6 +3,10 @@ title: "Arch Install"
 date: 2020-07-06T22:57:52-07:00
 draft: false
 toc: true
+tags:
+    - linux
+    - arch
+    - howto
 ---
 
 ## Intro
