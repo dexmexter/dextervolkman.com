@@ -1,6 +1,6 @@
 ---
 title: "Arch Install"
-date: 2020-16-07T17:56:49-07:00
+date: 2020-08-16T17:43:38-07:00
 draft: false
 toc: true
 tags:
