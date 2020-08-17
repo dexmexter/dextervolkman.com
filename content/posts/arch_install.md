@@ -9,7 +9,7 @@ tags:
     - howto
 ---
 
-# Intro
+## Intro
 
 I recently finished creating a home backup server so that I can start taking
 backups of my laptop automatically. It is a project that lays some groundwork
@@ -19,9 +19,9 @@ for future systems I would like to implement. The server is working now and I
     installation with a few items that were specific to the `dv-storage` server
     I was working on getting ready at the time.
 
-# Part 1: Arch Installation media
+## Part 1: Arch Installation media
 
-## Internet for installation environment
+### Internet for installation environment
 
 The first thing to do once booted into the Arch iso is to connect to the
 internet. I've covered [how to make a bootable USB](./bootable_usb) in a
@@ -38,13 +38,13 @@ ip link set [device] up
 Then pick a website and try to reach it with `ping`. Once you've confirmed that networking is up the
 next task is to partition the drives.
 
-## Update the system clock
+### Update the system clock
 
 ```bash
 timedatectl set-ntp true
 ```
 
-## Partition drives[^2]
+### Partition drives[^2]
 
 Look at the available drives with `lsblk`. In my case I have four drives and
 they look like this:
@@ -94,7 +94,7 @@ mkpart "Storage1" btrfs 0% 100%
 quit
 ```
 
-## Filesystem creation
+### Filesystem creation
 
 Now that the partitions are ready, the next step is to make the necessary
 filesystems on each of the partitions. The boot partition needs a fat32
@@ -123,12 +123,12 @@ mount /dev/sda1 /mnt/boot
 lsblk
 ```
 
-## Select mirrors
+### Select mirrors
 
 Edit `/etc/pacman.d/mirrorlist` so that physically closer mirrors are
 uncommented and at the top of the list.
 
-## Install packages
+### Install packages
 
 ```bash
 pacstrap /mnt base linux linux-firmware tmux vim btrfs-progs ranger man-db
@@ -136,14 +136,14 @@ man-pages
 ```
 
 
-## Fstab
+### Fstab
 
 ```bash
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 
-# Part 2: Chroot Environment
+## Part 2: Chroot Environment
 
 Changing root allows you to execute commands on the new operating system as if
 it were running.
@@ -152,20 +152,20 @@ it were running.
 arch-chroot /mnt
 ```
 
-## Root password
+### Root password
 
 ```bash
 passwd
 ```
 
-## Time zone
+### Time zone
 
 ```bash
 ln -sf /usr/share/zoneinfo/[region]/[city] /etc/localtime
 hwclock --systohc
 ```
 
-## Localization
+### Localization
 
 Edit `/etc/locale.gen`, uncomment `en_US.UTF-8 UTF-8`.
 
@@ -181,7 +181,7 @@ Create `/etc/locale.conf` and set `LANG` variable:
 LANG=en_US.UTF-8
 ```
 
-## Network configuration
+### Network configuration
 
 Create `/etc/hostname`:
 
@@ -199,7 +199,7 @@ Add matching info to `/etc/hosts`:
 
 Replace `127.0.1.1` with a static IP if appropriate.
 
-## Boot Loader[^4]
+### Boot Loader[^4]
 
 ```bash
 bootctl install
@@ -238,7 +238,7 @@ lsblk -dno PARTUUID /dev/sda2
 ```
 [^6]
 
-# Part 3: Configuring the new system
+## Part 3: Configuring the new system
 
 The system should now be ready to restart and boot into the newly installed
 operating system. Type `exit` to exit the chroot environment, then type
@@ -246,13 +246,13 @@ operating system. Type `exit` to exit the chroot environment, then type
 This last section is about getting some basic configuration ready on the new
 system so that it is usable and remotely accessible.
 
-## Time synchronization
+### Time synchronization
 
 ```bash
 timedatectl set-ntp true
 ```
 
-## Set Static IP[^7]
+### Set Static IP[^7]
 
 Start/Enable both two systemd services for networking. `networkd` is for
 setting the IP address and `resolved` is for DNS settings:
@@ -287,7 +287,7 @@ Use `ip a` and `ip route` to confirm that all the addresses look right. If you
 do not have an IP address yet double check that the network device is set to
     UP with `ip link set [device] up`.
 
-## SSH Access
+### SSH Access
 
 This is something that could have it's own post so I'm just going to brush
 over setting this up for now. Just install `openssh` and configure it by
@@ -301,7 +301,7 @@ I temporarily allowed root access so that I could do this but that is really
 not recommended and when I'm finished I will be setting `PermitRootLogin no`
 according to best practice.
 
-## Sudo and user account
+### Sudo and user account
 
 Next up is getting a user account setup and allowing that user to issue
 commands with elevated priveleges.
@@ -330,14 +330,14 @@ Defaults timestamp_timeout=10
 Now you can switch to the new user and make sure it is working with `su
 dexmexter`
 
-## XDG-User directories
+### XDG-User directories
 
 ```bash
 sudo pacman -S xdg-user-dirs
 xdg-user-dirs update
 ```
 
-## SSH part 2
+### SSH part 2
 
 Okay now that we have a user account that is not `root` we can get `ssh`
 working correctly. As long as the daemon `sshd.service` is running we should
@@ -351,7 +351,7 @@ ssh-copy-id -i ~/.ssh/id_ed25519 dexmexter@dv-storage
 Don't forget to undo the root access that was granted earlier and restart the
 daemon. SSH is now good to go and the a basic server is ready. This
 
-## Conclusion
+# Conclusion
 
 That it for now, at this point you can throw the server in a closet somewhere
 and start installing whatever special software you are planning to use with it.
