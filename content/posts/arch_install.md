@@ -1,6 +1,6 @@
 ---
 title: "Arch Install"
-date: Sun 16 Aug 2020 03:48:35 PM PDT
+date: 2020-16-07T17:56:49-07:00
 draft: false
 toc: true
 tags:
@@ -9,34 +9,17 @@ tags:
     - howto
 ---
 
-## Intro
+# Intro
 
 I recently finished creating a home backup server so that I can start taking
 backups of my laptop automatically. It is a project that lays some groundwork
-for future systems I would like to implement. The server is working now and
-    want to take the time to document the pieces that I needed to get it
-    working. This will take the form of several posts, each focusing on a
-    different piece of the implementation. This is the first post and will
-    focus on the overview of the project up to the installation of the
-    operating system.
+for future systems I would like to implement. The server is working now and I
+    want to take some time to document the pieces that I needed to get the
+    basic operating system installed. This is meant to be a more generic server
+    installation with a few items that were specific to the `dv-storage` server
+    I was working on getting ready at the time.
 
-## Hardware and Planning
-
-The end goal was to have to a server that I can send backups to automatically.
-I built it out of used hardware that I got from work so the hard-drives are
-quite old, this means that I felt it was really important to make sure I used
-some sort of RAID so that I am able to recover from a hard-drive failure when
-it happens.
-
-Using Free and Open Source Software (FOSS) was also a primary goal because I
-think open source is great and it is free. GNU/Linux, specifically Arch Linux,
-is the operating I decided to go with. Linux has several good ways to implement
-drive redundancy, mdadm probably being the most known. I chose the BTRFS file
-system because I had heard good things about it from a collegue who has used it
-for years in his server. I considered ZFS given the recent hype that resulted
-    from Ubuntu offering it as a installation option, however the reading I've
-    done suggests that BTRFS offers more flexibility when it comes to changing
-    the size of the data pools.
+# Part 1: Arch Installation media
 
 ## Internet for installation environment
 
@@ -142,8 +125,8 @@ lsblk
 
 ## Select mirrors
 
-Edit `/etc/pacman.d/mirrorlist` so that physically closer mirrors are at the
-top.
+Edit `/etc/pacman.d/mirrorlist` so that physically closer mirrors are
+uncommented and at the top of the list.
 
 ## Install packages
 
@@ -152,28 +135,37 @@ pacstrap /mnt base linux linux-firmware tmux vim btrfs-progs ranger man-db
 man-pages
 ```
 
-## Configure system
 
-### Fstab
+## Fstab
 
 ```bash
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
-### Chroot
+
+# Part 2: Chroot Environment
+
+Changing root allows you to execute commands on the new operating system as if
+it were running.
 
 ```bash
 arch-chroot /mnt
 ```
 
-### Time zone
+## Root password
+
+```bash
+passwd
+```
+
+## Time zone
 
 ```bash
 ln -sf /usr/share/zoneinfo/[region]/[city] /etc/localtime
 hwclock --systohc
 ```
 
-### Localization
+## Localization
 
 Edit `/etc/locale.gen`, uncomment `en_US.UTF-8 UTF-8`.
 
@@ -189,7 +181,7 @@ Create `/etc/locale.conf` and set `LANG` variable:
 LANG=en_US.UTF-8
 ```
 
-### Network configuration
+## Network configuration
 
 Create `/etc/hostname`:
 
@@ -206,12 +198,6 @@ Add matching info to `/etc/hosts`:
 ```
 
 Replace `127.0.1.1` with a static IP if appropriate.
-
-### Root password
-
-```bash
-passwd
-```
 
 ## Boot Loader[^4]
 
@@ -245,19 +231,20 @@ initrd  /initramfs-linux.img
 options root="PARTUUID=[PARTUUID]" rw
 ```
 
-The `PARTUUID` can be located with:
+The `PARTUUID` for the above file can be located with:
 
 ```bash
 lsblk -dno PARTUUID /dev/sda2
 ```
 [^6]
 
-### Reboot
+# Part 3: Configuring the new system
 
-The system should now be ready to restart the system. Type `exit` to exit the
-chroot environment, then type `reboot` command. Remove the installation media
-and watch your system boot! The next step is to make sure that networking is
-working correctly. A static IP, default route, and DNS servers are all needed.
+The system should now be ready to restart and boot into the newly installed
+operating system. Type `exit` to exit the chroot environment, then type
+`reboot` command. Remove the installation media and watch your system boot!
+This last section is about getting some basic configuration ready on the new
+system so that it is usable and remotely accessible.
 
 ## Time synchronization
 
@@ -302,12 +289,12 @@ do not have an IP address yet double check that the network device is set to
 
 ## SSH Access
 
-This is something that should have it's own post so I'm just going to brush
+This is something that could have it's own post so I'm just going to brush
 over setting this up for now. Just install `openssh` and configure it by
 editing `/etc/ssh/sshd_config`. After editing that file, use `systemctl
 enable/start sshd` to get the daemon running. We still have not setup the sudo
 user so this is something that really should come later but I set it up as
-soon as I can so that I am able to finish everything else from my laptop, with
+soon as I can so that I was able to finish everything else from my laptop, with
 my mechanical keyboard and comfy chair.
 
 I temporarily allowed root access so that I could do this but that is really
@@ -367,10 +354,10 @@ daemon. SSH is now good to go and the a basic server is ready. This
 ## Conclusion
 
 That it for now, at this point you can throw the server in a closet somewhere
-and start installing whatever special software you are planning to use with
-it. This particular server, `dv-storage` will be configured as a network work
-storage drive that will be used to hold Proxmox VHD's that all cluster nodes
-have access to.
+and start installing whatever special software you are planning to use with it.
+This particular server, `dv-storage` will be configured as a network storage
+drive that will be used to hold Proxmox VHD's that all cluster nodes have
+access to.
 
 [^1]: Most of the material in this post is ripped from the fantastic [arch
 linux installation
@@ -391,7 +378,6 @@ instructions](https://wiki.archlinux.org/index.php/Systemd-boot) as always
 
 [^5]: <https://wiki.archlinux.org/index.php/Microcode>
 
-[^6]:
-<https://wiki.archlinux.org/index.php/Persistent_block_device_naming#by-partuuid>
+[^6]: <https://wiki.archlinux.org/index.php/Persistent_block_device_naming#by-partuuid>
 
 [^7]: <https://wiki.archlinux.org/index.php/Systemd-networkd>
