@@ -2,8 +2,6 @@
     publish = "public"
     command = "hugo --gc --minify"
 
-    googleAnalytics = "UA-166761220-1"
-
     [context.production.environment]
     HUGO_VERSION = "0.69.1"
     HUGO_ENV = "production"
