@@ -4,7 +4,6 @@ languageCode = "en-us"
 theme        = "hello-friend-ng"
 
 enableGitInfo = true
-googleAnalytics = "UA-166761220-1"
 
 [params]
   dateform        = "Jan 2, 2006"

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tar on Dexter&#39;s Personal Site</title>
+    <link>https://dextervolkman.com/tags/tar/</link>
+    <description>Recent content in tar on Dexter&#39;s Personal Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 16 May 2020 15:06:00 -0700</lastBuildDate>
+    
+	<atom:link href="https://dextervolkman.com/tags/tar/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tar Backup and Restore</title>
+      <link>https://dextervolkman.com/posts/tar-backup-and-restore/</link>
+      <pubDate>Sat, 16 May 2020 15:06:00 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/posts/tar-backup-and-restore/</guid>
+      <description>Preamble In my quest to learn and become more proficient with computers, I will often have some kind of ongoing personal project that I will work on in my spare time. Over the past few weeks the project that has taken up my evenings has been building a Linux From Scratch system. The goal is to build a working linux system by downloading and compiling everything manually from the source code.</description>
+    </item>
+    
+  </channel>
+</rss>

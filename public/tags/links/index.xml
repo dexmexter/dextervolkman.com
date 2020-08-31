@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>links on Dexter&#39;s Personal Site</title>
+    <link>https://dextervolkman.com/tags/links/</link>
+    <description>Recent content in links on Dexter&#39;s Personal Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 26 Apr 2020 10:21:28 -0700</lastBuildDate>
+    
+	<atom:link href="https://dextervolkman.com/tags/links/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Things Worth Sharing #1</title>
+      <link>https://dextervolkman.com/posts/readings-1/</link>
+      <pubDate>Sun, 26 Apr 2020 10:21:28 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/posts/readings-1/</guid>
+      <description>Since I don&amp;rsquo;t have any content for this site yet and I would like to get some practice putting articles together, I have an idea for a series I could do. I use an RSS reader called tmux to collect articles from a variety of different places that I find interesting. Every day I look through this list and pick out a handful of headlines that look interesting. My idea is to share these articles along with a brief explanation for why I enjoyed them.</description>
+    </item>
+    
+  </channel>
+</rss>

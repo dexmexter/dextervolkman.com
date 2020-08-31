@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ncmpcpp on Dexter&#39;s Personal Site</title>
+    <link>https://dextervolkman.com/tags/ncmpcpp/</link>
+    <description>Recent content in ncmpcpp on Dexter&#39;s Personal Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 22 Jul 2020 21:44:40 -0700</lastBuildDate>
+    
+	<atom:link href="https://dextervolkman.com/tags/ncmpcpp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mpd not working? Try starting with --user</title>
+      <link>https://dextervolkman.com/posts/mpd_not_working/</link>
+      <pubDate>Wed, 22 Jul 2020 21:44:40 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/posts/mpd_not_working/</guid>
+      <description>This is an issue that has happened more than once now. I&amp;rsquo;ll restart my computer and ncmpcpp will not be able to locate the mpd database. If this happens here is what you should try.
+Check if an mpd server is running with:
+systemctl status mpd If the service is active, stop it with:
+systemctl stop mpd.socket systemctl stop mpd Once it is stopped you can start it with the current user:</description>
+    </item>
+    
+  </channel>
+</rss>
