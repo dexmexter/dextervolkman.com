@@ -2,22 +2,103 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Dexter&#39;s Personal Site</title>
-    <link>dextervolkman.com/tags/</link>
+    <link>https://dextervolkman.com/tags/</link>
     <description>Recent content in Tags on Dexter&#39;s Personal Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 21 Apr 2020 21:14:18 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2020 17:43:38 -0700</lastBuildDate>
     
-	<atom:link href="dextervolkman.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dextervolkman.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>arch</title>
+      <link>https://dextervolkman.com/tags/arch/</link>
+      <pubDate>Sun, 16 Aug 2020 17:43:38 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/tags/arch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>howto</title>
+      <link>https://dextervolkman.com/tags/howto/</link>
+      <pubDate>Sun, 16 Aug 2020 17:43:38 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/tags/howto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://dextervolkman.com/tags/linux/</link>
+      <pubDate>Sun, 16 Aug 2020 17:43:38 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mpd</title>
+      <link>https://dextervolkman.com/tags/mpd/</link>
+      <pubDate>Wed, 22 Jul 2020 21:44:40 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/tags/mpd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ncmpcpp</title>
+      <link>https://dextervolkman.com/tags/ncmpcpp/</link>
+      <pubDate>Wed, 22 Jul 2020 21:44:40 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/tags/ncmpcpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backup</title>
+      <link>https://dextervolkman.com/tags/backup/</link>
+      <pubDate>Sat, 16 May 2020 15:06:00 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/tags/backup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tar</title>
+      <link>https://dextervolkman.com/tags/tar/</link>
+      <pubDate>Sat, 16 May 2020 15:06:00 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/tags/tar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dd</title>
+      <link>https://dextervolkman.com/tags/dd/</link>
+      <pubDate>Mon, 04 May 2020 17:56:49 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/tags/dd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>links</title>
+      <link>https://dextervolkman.com/tags/links/</link>
+      <pubDate>Sun, 26 Apr 2020 10:21:28 -0700</pubDate>
+      
+      <guid>https://dextervolkman.com/tags/links/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>untagged</title>
-      <link>dextervolkman.com/tags/untagged/</link>
+      <link>https://dextervolkman.com/tags/untagged/</link>
       <pubDate>Tue, 21 Apr 2020 21:14:18 -0700</pubDate>
       
-      <guid>dextervolkman.com/tags/untagged/</guid>
+      <guid>https://dextervolkman.com/tags/untagged/</guid>
       <description></description>
     </item>
     

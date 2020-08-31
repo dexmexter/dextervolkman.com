@@ -3,46 +3,121 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>dextervolkman.com/</loc>
-    <lastmod>2020-04-23T20:35:16-07:00</lastmod>
+    <loc>https://dextervolkman.com/tags/arch/</loc>
+    <lastmod>2020-08-16T17:47:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>dextervolkman.com/interests/</loc>
-    <lastmod>2020-04-23T20:35:16-07:00</lastmod>
+    <loc>https://dextervolkman.com/posts/arch_install/</loc>
+    <lastmod>2020-08-16T17:47:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>dextervolkman.com/about/</loc>
-    <lastmod>2020-04-21T22:42:23-07:00</lastmod>
+    <loc>https://dextervolkman.com/</loc>
+    <lastmod>2020-08-16T17:47:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>dextervolkman.com/posts/my-first-post/</loc>
-    <lastmod>2020-04-21T21:14:18-07:00</lastmod>
+    <loc>https://dextervolkman.com/tags/howto/</loc>
+    <lastmod>2020-08-16T17:47:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>dextervolkman.com/posts/</loc>
-    <lastmod>2020-04-21T21:14:18-07:00</lastmod>
+    <loc>https://dextervolkman.com/tags/linux/</loc>
+    <lastmod>2020-08-16T17:47:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>dextervolkman.com/tags/</loc>
-    <lastmod>2020-04-21T21:14:18-07:00</lastmod>
+    <loc>https://dextervolkman.com/posts/</loc>
+    <lastmod>2020-08-16T17:47:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>dextervolkman.com/tags/untagged/</loc>
-    <lastmod>2020-04-21T21:14:18-07:00</lastmod>
+    <loc>https://dextervolkman.com/tags/</loc>
+    <lastmod>2020-08-16T17:47:54-07:00</lastmod>
   </url>
   
   <url>
-    <loc>dextervolkman.com/blog/</loc>
+    <loc>https://dextervolkman.com/tags/mpd/</loc>
+    <lastmod>2020-08-16T15:43:29-07:00</lastmod>
   </url>
   
   <url>
-    <loc>dextervolkman.com/series/</loc>
+    <loc>https://dextervolkman.com/posts/mpd_not_working/</loc>
+    <lastmod>2020-08-16T15:43:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/tags/ncmpcpp/</loc>
+    <lastmod>2020-08-16T15:43:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/links/</loc>
+    <lastmod>2020-07-22T21:56:14-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/tags/backup/</loc>
+    <lastmod>2020-05-16T20:58:09-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/tags/tar/</loc>
+    <lastmod>2020-05-16T20:58:09-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/posts/tar-backup-and-restore/</loc>
+    <lastmod>2020-05-16T20:58:09-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/posts/bootable-usb/</loc>
+    <lastmod>2020-05-16T20:58:09-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/tags/dd/</loc>
+    <lastmod>2020-05-16T20:58:09-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/tags/links/</loc>
+    <lastmod>2020-04-26T16:05:48-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/posts/readings-1/</loc>
+    <lastmod>2020-04-26T16:05:48-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/interests/</loc>
+    <lastmod>2020-06-08T22:25:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/about/</loc>
+    <lastmod>2020-04-29T20:48:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/posts/my-first-post/</loc>
+    <lastmod>2020-04-29T20:48:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/tags/untagged/</loc>
+    <lastmod>2020-04-29T20:48:29-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://dextervolkman.com/series/</loc>
   </url>
   
 </urlset>
