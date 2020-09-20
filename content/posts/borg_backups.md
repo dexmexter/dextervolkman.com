@@ -218,11 +218,14 @@ sudo journalctl -u autoborg
 
 ## Conclusion
 
-That's it! Now you've got proper backups set up. The next important thing to
-know is how to restore files when needed. I'm not going to explain that here,
-maybe in another post. The `Borg Backups` documentation has instructions so if
-you are not sure of what something means or if I didn't explain something very
-well, it would be best to `RTFM` and see if you can figure it out yourself.
+That's it, now you've got proper backups set up!
+
+The next important thing to know is how to restore files when needed. I'm not
+going to explain that here, maybe in another post. The `Borg Backups`
+documentation has instructions so if you need to restore any documents that
+have been backed up, or if I didn't explain something very well, it would be
+best to [rtfm](https://en.wikipedia.org/wiki/RTFM) and see if you can figure it
+out yourself.
 
 In the future I want to use a proper network monitoring system like `Zabbix` or
 `Nagios` or `Icinga` that would monitor the backups and notify me when
