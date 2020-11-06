@@ -6,14 +6,16 @@ toc: true
 ---
 ## Preface
 
-We have recently lived through two elections, our
-provincial election and the US election. By the time we meet it seems likely
-that we may not fully know who the next President of the US will be. I would
-love to have a general, high-level conversation about people's experience with
-the relationship between church and politics. I recognize that even saying
-those words together will make some people quite nervous.
-
-First I think it would be good to start with a general check-in.
+We have recently lived through two elections, our provincial election and the
+US election and by the time we meet it seems likely that we will not fully know
+who the next President of the US will be. I would love to have a general,
+high-level conversation about people's experiences with the relationship
+between church and politics. I'm not looking to discuss the merits of specific
+parties or platforms. I recognize that even saying the words church and
+politics together will make some people quite nervous so I hope to find a way
+frame this conversation in a way that will allow people to engage without fear
+of how others might react. First I think it would be good to start with a
+general check-in.
 
 ## Check-in and prior personal experience
 
