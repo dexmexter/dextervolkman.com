@@ -16,12 +16,13 @@ tags:
 Backups are crucial for making sure that important data does not get lost but
 when you have to remember to connect an external drive everytime you need a
 backup it becomes a chore and is liable to be forgotten. In order to force
-myself to take good backups of my systems, I setup a backup server that I could
-store `Borg Backup` repos, then I used `systemd-timers` to automatically take
-backups every night. Here are the instructions for how I set everything up for
-my systems. The instructions assume that you have a system to store backups but
-most of the information could be adjusted to work in other contexts as well. At
-the end I'll include links to the articles where I got most of this setup from.
+myself to take regular backups, I setup a backup server where I could store
+`Borg Backup` repos, then I used `systemd-timers` to automatically take backups
+everyday. Here are the instructions for how I set everything up for my systems.
+The instructions assume that you have a system to store backups but most of the
+information could be adjusted to work in other contexts as well, for example if
+you wanted to use an external drive for storage. At the end I'll include links
+to the articles where I got most of this setup from.
 
 ## Prerequisites
 
@@ -29,7 +30,7 @@ Make sure that `/etc/hosts` includes a line for the IP address of your backup
 server.
 
 ```
-192.168.5.5     dv-backups.localdomain          dv-backups
+192.168.5.3     dv-data.localdomain          dv-data
 ```
 
 You'll also need to ensure that the client system you are backing up has `ssh`
@@ -37,112 +38,78 @@ access to the computer where the backups are being stored. I like [this
 explainer](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
 from Digital Ocean on how to set up ssh keys.
 
-Install borg on both the client system and the system storing the backups:
+Install `borgbackups` on both the client and server  and `borgmatic` on the client:
 
 ```bash
-sudo pacman -S borg
+sudo pacman -S borg borgmatic
 ```
 
 If you are not using `archlinux` you will need a different command to install
-borg. Check the `Borg Backups` documentation for [installation
-instructions](https://borgbackup.readthedocs.io/en/stable/installation.html).
+borg. Check the respective
+[borgbackups](https://borgbackup.readthedocs.io/en/stable/installation.html)
+and [borgmatic](https://torsion.org/borgmatic/) documentation for installation instructions.
 
-Next is initializing the backup repository on `dv-backups` from the client
-system, `dv-storage`. The following command will ask for an encryption
-passphrase used to access the repo, select something secure and store it
-somewhere safe, losing this password means losing access to the backups. The
-second command is for backing up the repo key, store this somewhere safe as
-well.
+Next is initializing the backup repository on `dv-data` from the client system,
+`dv-arch`. First make sure that the folder you want to store backups in is
+setup, in my case I created `~/borg` on the server. The following command will
+ask for an encryption passphrase used to access the repo, select something
+secure and store it somewhere safe, losing this password means losing access to
+the backups. The second command is for backing up the repo key, store this
+somewhere safe as well.
 
 ```bash
-borg init --encryption=repokey-blake2 dv-backups:/home/dexmexter/borg/dv-storage
-borg key export dv-backups:~/borg/dv-storage ./dv-storage_borg.key
+borg init --encryption=repokey-blake2 dv-data:/home/dexmexter/borg/dv-arch
+borg key export dv-data:~/borg/dv-arch ./dv-arch_borg.key
 ```
 
 ## Backup Script
 
-Now that the backup repository is ready, the next step is to create a script
-that contains all the backup settings. Backups can always be triggered manually
-but making a script will allow for automating the entire process as well as
-provide consistency for the backup archive names.
+Now that the backup repository is ready, the next step is to create the
+`borgmatic` yaml file that contains the configuration for the backups. Backups can always be triggered manually but
+using `borgmatic` makes everything a lot easier to manage.
 
-`~/.local/bin/autoborg`
+`/etc/borgmatic/config.yaml`
 
 ```
-#!/bin/sh
+location:
+    source_directories:
+        - /home
+        - /etc
 
-# ssh key setup
-eval $(ssh-agent)
-ssh-add /home/dexmexter/.ssh/backups_ed25519
+    repositories:
+        - dexmexter@dv-data:~/borg/dv-arch
 
-# repo and passphrase
-export BORG_REPO="dexmexter@dv-backups:/home/dexmexter/borg/dv-storage"
-export BORG_PASSPHRASE='***********'
+    one_file_system: true
 
-# some helpers and error handling:
-info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
-trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
+    exclude_patterns:
+        - '*.pyc'
+        - /home/*/.cache
+        - /home/.local/share/Trash
 
-info "Starting backup"
+    exclude_caches: true
 
-# backup the directories
-borg create 			    \
-    --verbose 			    \
-    --progress			    \
-    --filter AME 		    \
-    --list 			        \
-    --stats 			    \
-    --show-rc 			    \
-    --compression zlib,5	\
-    --exclude-caches 		\
-    --exclude '*.iso'		\
-  				            \
-    ::'{hostname}-{now}' 	\
-    /etc 			        \
-    /home			        \
+    exclude_if_present:
+        - .nobackup
 
-    # Route normal process logging to journalctl
-    2>&1
+storage:
+    encryption_passphrase: "nude pebbles"
+    compression: auto,zstd
+    ssh_command: ssh -i /home/dexmexter/.ssh/backups_ed25519 -o ServerAliveInterval=30 -o ServerAliveCountMax=3
+    relocated_repo_access_is_ok: true
 
-backup_exit=$?
+retention:
+    keep_daily: 7
+    keep_weekly: 4
+    keep_monthly: 6
 
-info "Pruning repository"
-
-# prune the repo
-borg prune 			\
-    --list 			\
-    --prefix '{hostname}-'	\
-    --show-rc 			\
-    --keep-daily   4 		\
-    --keep-weekly  2 		\
-    --keep-monthly 5		\
-
-    # Route normal process logging to journalctl
-    2>&1
-
-prune_exit=$?
-
-# use highest exit code as exit code
-global_exit=$(( backup_exit > prune_exit ? backup_exit : prune_exit ))
-info "Global exit is $global_exit"
-
-if [ ${global_exit} -eq 0 ]; then
-    	info "Backup and Prune finished successfully"
-elif [ ${global_exit} -eq 1 ]; then
-    	info "Backup and/or Prune finished with warnings"
-else
-	info "Backup and/or Prune finished with errors"
-fi
-
-exit ${global_exit}
+hooks:
+    on_error:
+        - echo "Error during prune/create/check."
 ```
 
 For details on how to make changes to this file and what the different options
-mean check the [Borg Backups
-documentation](https://borgbackup.readthedocs.io/en/stable/). Note that this
-file will need to be turned into a script with `chmod u+x
-~/.local/bin/autoborg` and may need to be executed as the root user depending
-on what you are backing up.
+mean check the [borgmatic
+documentation](https://torsion.org/borgmatic/docs/reference/configuration/).
 
 ## Automating with systemd-timers
 
@@ -158,33 +125,43 @@ the same location. This is what mine look like:
 
 ```
 [Unit]
-Description=Borg User Backup
+Description=borgmatic backup
+Wants=network-online.target
+After=network-online.target
+ConditionACPower=true
 
 [Service]
-Type=simple
+Type=oneshot
+
+# Lower CPU and I/O priority.
 Nice=19
-IOSchedulingClass=2
+CPUSchedulingPolicy=batch
+IOSchedulingClass=best-effort
 IOSchedulingPriority=7
-#ExecStartPre=/usr/bin/borg break-lock $BORG_REPO
-ExecStart=/home/dexmexter/.local/bin/autoborg
+IOWeight=100
+
+Restart=no
+
+LogRateLimitIntervalSec=0
+
+ExecStart=systemd-inhibit --who="borgmatic" --why="Prevents interrupting scheduled backup" /usr/bin/borgmatic --syslog-verbosity 1
 ```
 
 `/etc/systemd/system/autoborg.timer`
 
 ```
 [Unit]
-Description=Borg User Backup Timer
+Description=Run borgmatic backup
 
 [Timer]
-WakeSystem=false
-OnCalendar=\*-\*-\* 03:00
-RandomizedDelaySec=10min
+OnCalendar=*-*-* 20:00
+Persistent=true
 
 [Install]
 WantedBy=timers.target
 ```
 
-This timer is set to run everyday at 3am. If you need something different,
+This timer is set to run everyday at 8pm. If you need something different,
 you'll need to look up instructions. The `archlinux wiki` has some great
 examples on [this page](https://wiki.archlinux.org/index.php/Systemd/Timers).
 
@@ -235,6 +212,7 @@ the logs.
 ## Resources
 
 <https://borgbackup.readthedocs.io/>
+<https://torsion.org/borgmatic/docs/reference/configuration/>
 <https://practical-admin.com/blog/backups-using-borg/>
 <https://opensource.com/article/17/10/backing-your-machines-borg>
 <https://blog.andrewkeech.com/posts/170718_borg.html>
