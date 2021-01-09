@@ -201,9 +201,13 @@ Replace `127.0.1.1` with a static IP if appropriate.
 
 ### Boot Loader[^4]
 
+`bootctl` is the `systemd` bootloader. It is very easy to setup and configure.
+One thing to note is that it only works with `UEFI` booting. Check to make sure
+that `/dev/sda1` is mounted at `/boot`, then run the following command to
+install the bootloader.
+
 ```bash
 bootctl install
-pacman -S intel-ucode
 ```
 
 Install the processor microcode[^5]:
@@ -315,7 +319,7 @@ pacman -S sudo
 Create new user, set password, and open sudoers file for editing:
 
 ```bash
-adduser -m dexmexter
+useradd -m dexmexter
 passwd dexmexter
 EDITOR=vim visudo
 ```
@@ -334,7 +338,7 @@ dexmexter`
 
 ```bash
 sudo pacman -S xdg-user-dirs
-xdg-user-dirs update
+xdg-user-dirs-update
 ```
 
 ### SSH part 2
