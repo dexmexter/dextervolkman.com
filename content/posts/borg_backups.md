@@ -83,8 +83,7 @@ location:
 
     exclude_patterns:
         - '*.pyc'
-        - /home/*/.cache
-        - /home/.local/share/Trash
+        - **/.cache
 
     exclude_caches: true
 
@@ -92,7 +91,7 @@ location:
         - .nobackup
 
 storage:
-    encryption_passphrase: "nude pebbles"
+    encryption_passphrase: "super_secure_password"
     compression: auto,zstd
     ssh_command: ssh -i /home/dexmexter/.ssh/backups_ed25519 -o ServerAliveInterval=30 -o ServerAliveCountMax=3
     relocated_repo_access_is_ok: true
